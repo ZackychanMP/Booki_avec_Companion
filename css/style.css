@@ -3,6 +3,14 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.entete .logo {
+    width: auto;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+}
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -12,10 +20,148 @@
 .fa-solid {
     color: var(--main-color);
 }
+/*********header*********/
+
+.entete {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.onglets {
+    display: flex;
+    align-items: stretch;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 0;
+}
+
+.onglets a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    border-top: 3px solid transparent;
+}
+
+.onglets a:hover {
+    color: #0065FC;
+    border-top-color: #0065FC;
+}
+
+.recherche {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: 700px;
+    padding: 1rem;
+}
+
+.recherche-champ {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: stretch;
+    background: #F2F2F2;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.recherche-icone {
+    flex: auto;
+    max-width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F2F2F2;
+}
+
+.recherche-champ i {
+    color: #000;
+}
+
+.recherche-champ input {
+    flex: 1;
+    border: none;
+    background: white;
+    outline: none;
+    font: inherit;
+    text-align: center;
+    font-weight: 600;
+    padding: 1rem 0;
+    cursor: text;
+}
+
+.recherche-champ :has(input:focus){
+    box-shadow: 0 0 2px #0065FC;
+}
+
+.recherche-champ :has(input:invalid){
+    box-shadow: 0 0 2px red;
+}
+
+.recherche-button {
+    border: none;
+    background: #0065FC;
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    padding: 0 2rem;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+}
+
+.recherche-button:hover {
+    background: #DEEBFF;
+    color: #0065FC;
+}
+
+.filtres {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 2rem;
+}
+
+.filtre {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 3px solid #F2F2F2;
+}
+
+.filtre:hover{
+    background: #DEEBFF;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info_lien {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #F2F2F2;
+}
+
+.info_lien:hover{
+    background: #DEEBFF;
+}
 
 body {
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .main-container {
@@ -121,7 +267,33 @@ a {
     margin-bottom: 5px;
 }
 
+/******* footer *******/
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    background: #F2F2F2;
+    border-radius: 20px;
+}
+
+.footer h3 {
+    margin-bottom: 16px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer li {
+    margin-bottom: 12px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
